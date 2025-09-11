@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arches-example"
+version = "0.0.9"
+readme = "README.md"
+authors = [
+    {name = "Stuart Marshall"}
+]
+license = "AGPL-3.0-or-later"
+description = "A basic app example with a workflow"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Framework :: Django",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.2",
+    "Intended Audience :: Developers",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "arches>=8.1.0b0",
+]
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+arches_example = [
+    "data/graphs/resource_models/*.json",
+    "plugins/*.json", 
+    "templates/**/*",
+    "media/**/*",
+]

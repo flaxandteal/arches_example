@@ -1,0 +1,12 @@
+{
+    "pluginid": "1e4c5386-3fe3-4ae3-badd-7cc18dfe50ed",
+    "name": "Create Movie",
+    "icon": "fa fa-check",
+    "component": "views/components/plugins/create-movie-workflow",
+    "componentname": "create-movie-workflow",
+    "config": {
+        "show": true
+    },
+    "slug": "create-movie-workflow",
+    "sortorder": 0
+}
