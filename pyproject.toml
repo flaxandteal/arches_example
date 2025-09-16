@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "arches-example"
-version = "0.0.9"
+version = "0.0.2"
 readme = "README.md"
 authors = [
     {name = "Stuart Marshall"}

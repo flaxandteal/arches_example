@@ -33,7 +33,7 @@ export default ko.components.register('create-movie-workflow', {
                                             disabled: true,
                                             allowInstanceCreation: false,
                                             widget: {
-                                                visible: false
+                                                visible: true
                                             },
                                             config: {
                                                 label: "I have changed!",

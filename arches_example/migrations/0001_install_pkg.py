@@ -13,13 +13,10 @@ def load_graphs_and_plugins(apps, schema_editor):
         try:
             print("Running arches example migration")
             graphs_path = pkg_resources.resource_filename(package_name, 'data/graphs/resource_models')
-            print(f"Graph path {graphs_path}")
             if os.path.exists(graphs_path):
-                print("Found graph path")
                 for filename in os.listdir(graphs_path):
                     if filename.endswith('.json'):
                         graph_file = os.path.join(graphs_path, filename)
-                        print("Found graph file")
                         try:
                             call_command('packages', '-o', 'import_graphs', '-s', graph_file)
                             print(f"Successfully imported graph: {filename}")
@@ -30,12 +27,9 @@ def load_graphs_and_plugins(apps, schema_editor):
         
         try:
             plugins_path = pkg_resources.resource_filename(package_name, 'plugins')
-            print(f"Plugins path {plugins_path}")
             if os.path.exists(plugins_path):
-                print("Found plugin path")
                 for filename in os.listdir(plugins_path):
                     if filename.endswith('.json'):
-                        print("Found plugin file")
                         plugin_file = os.path.join(plugins_path, filename)
                         try:
                             call_command('plugin', 'register', '--source', plugin_file)
